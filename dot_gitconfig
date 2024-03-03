@@ -1,0 +1,22 @@
+# This is Git's per-user configuration file.
+[user]
+	email = hey@iamsaravieira.com
+	name = Sara Vieira
+# Please adapt and uncomment the following lines:
+#	name = Sara Vieira
+#	email = hey@iamsaravieira.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[remote "origin"]
+	fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
+[credential]
+	helper = osxkeychain
+[init]
+	defaultBranch = main
+[core]
+	excludesFile = ~/.gitignore
+[push]
+	autoSetupRemote = true
